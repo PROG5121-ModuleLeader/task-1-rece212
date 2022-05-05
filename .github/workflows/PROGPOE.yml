@@ -42,16 +42,16 @@ jobs:
        # copy compiled classes to test directory 
       - name : copy compiled classes to testresources directory 
         working-directory: ./src/prjtestproject
-        run: cp -t  "../../test/prjTestProject" Message.class PrjTestProject.class Response.class
+        run: cp -t  "../../test/prjTestProject" Message.class PrjTestProject.class
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
-        working-directory: ./test/prjTestProject
-        run: cp -t  "../../testresources/" Message.class PrjTestProject.class Response.class
+        working-directory: ./test/prjtestproject
+        run: cp -t  "../../testresources/" Message.class PrjTestProject.class
         
         # list contents or directory
       - name: List contents test package
-        working-directory: ./test/prjTestProject
+        working-directory: ./test/prjtestproject
         run: ls
         
         #run Message Class tests and output report 
