@@ -21,10 +21,18 @@ public class MessageTest {
      * Test of TestData method, of class Message.
      */
     @Test
-    public void testTestData() 
+    public void TestDataPass() 
     {
         Message m = new Message();
         String Expected = "Hello Online Class";
+        String Actual = m.TestData();
+        assertEquals(Expected,Actual);
+    }
+    @Test
+    public void TestDataFail() 
+    {
+        Message m = new Message();
+        String Expected = "Hello Online Class's";
         String Actual = m.TestData();
         assertEquals(Expected,Actual);
     }
