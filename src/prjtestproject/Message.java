@@ -24,4 +24,15 @@ public class Message
         }else 
             return false;
     }
+    
+    public boolean CheckUserName(String strName)
+    {
+        if (strName.length() >10)
+        {
+            return true;
+        }else 
+        {
+            return false;
+        }
+    }
 }

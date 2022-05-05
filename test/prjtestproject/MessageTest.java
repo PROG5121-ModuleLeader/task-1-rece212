@@ -52,5 +52,22 @@ public class MessageTest {
         boolean Actual = m.ValidNumber(8);
         assertTrue(Actual);
     }
+    @Test
+    public void testValidUserPass() 
+    {
+        Message m = new Message();
+        boolean Expected = true;
+        boolean Actual = m.CheckUserName("Reece");
+        assertTrue(Actual);
+    }
+    
+    @Test
+    public void testValidUserFail() 
+    {
+        Message m = new Message();
+        boolean Expected = true;
+        boolean Actual = m.CheckUserName("Tim");
+        assertTrue(Actual);
+    }
     
 }
