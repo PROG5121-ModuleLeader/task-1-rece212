@@ -31,17 +31,17 @@ jobs:
      # Compiles classes to test 
       - name: compile classes
         working-directory: ./src
-        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" ./prjTestProject/PrjTestProject.java ./prjTestProject/Message.java "../test/prjTestProject/PrjTestProjectTest.java"  "../test/prjTestProject/MessageTest.java" 
+        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" ./prjtestproject/PrjTestProject.java ./prjtestproject/Message.java "../test/prjtestproject/PrjTestProjectTest.java"  "../test/prjtestproject/MessageTest.java" 
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
-        working-directory: ./src/prjTestProject
+        working-directory: ./src/prjtestproject
         run: ls
         
         
        # copy compiled classes to test directory 
       - name : copy compiled classes to testresources directory 
-        working-directory: ./src/prjTestProject
+        working-directory: ./src/prjtestproject
         run: cp -t  "../../test/prjTestProject" Message.class PrjTestProject.class Response.class
         
         #copy compiled tests 
