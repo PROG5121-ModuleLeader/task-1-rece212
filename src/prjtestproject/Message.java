@@ -27,7 +27,7 @@ public class Message
     
     public boolean CheckUserName(String strName)
     {
-        if (strName.length() >10)
+        if (strName.length() >=4)
         {
             return true;
         }else 
