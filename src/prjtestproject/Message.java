@@ -15,4 +15,13 @@ public class Message
     {
         return "Hello Online Class";
     }
+    
+    public boolean ValidNumber(int y)
+    {
+        if (y >9)
+        {
+            return true;
+        }else 
+            return false;
+    }
 }

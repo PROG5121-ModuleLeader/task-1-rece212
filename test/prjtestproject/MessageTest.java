@@ -28,5 +28,21 @@ public class MessageTest {
         String Actual = m.TestData();
         assertEquals(Expected,Actual);
     }
+    @Test
+    public void testValidNoPass() 
+    {
+        Message m = new Message();
+        boolean Expected = true;
+        boolean Actual = m.ValidNumber(10);
+        assertTrue(Actual);
+    }
+    @Test
+    public void testValidNoFail() 
+    {
+        Message m = new Message();
+        boolean Expected = true;
+        boolean Actual = m.ValidNumber(8);
+        assertTrue(Actual);
+    }
     
 }
